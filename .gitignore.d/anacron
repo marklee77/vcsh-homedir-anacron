@@ -1,0 +1,16 @@
+*
+!.config
+!.config/anacron
+!.config/anacron/*
+!.config/mr
+!.config/mr/config.d
+!.config/mr/config.d/anacron
+!.config/supervisord
+!.config/supervisord/config.d
+!.config/supervisord/config.d/anacron
+!.gitconfig
+!.gitignore.d
+!.gitignore.d/anacron
+!.local
+!.local/bin
+!.local/bin/anacron.sh

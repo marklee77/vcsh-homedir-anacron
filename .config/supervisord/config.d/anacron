@@ -1,0 +1,4 @@
+[program:anacron]
+command=runinterval 3600 anacron.sh
+autorestart=true
+stopsignal=KILL
