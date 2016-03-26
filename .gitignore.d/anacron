@@ -8,7 +8,6 @@
 !.config/supervisord
 !.config/supervisord/config.d
 !.config/supervisord/config.d/anacron
-!.gitconfig
 !.gitignore.d
 !.gitignore.d/anacron
 !.local
