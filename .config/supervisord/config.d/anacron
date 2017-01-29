@@ -1,3 +1,4 @@
-[eventlistener:anacron]
-command=anacron.sh
-events=TICK_3600
+[program:anacron]
+command=runinterval 3600 anacron.sh
+autorestart=true
+stopsignal=KILL
