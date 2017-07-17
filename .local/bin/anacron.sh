@@ -12,7 +12,7 @@ if ! flock -n 200 || ! echo "$$" > "${pidfile}"; then
     echo "another instance of the ${scriptname} is currently running..." >&2
     exit 1
 fi
-trap cleanup EXIT SIGHUP SIGINT SIGQUIT SIGTERM
+trap cleanup EXIT HUP INT QUIT TERM
 
 # Set secure permissions on created directories and files
 umask 077
