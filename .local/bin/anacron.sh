@@ -3,8 +3,8 @@ scriptname="$(basename "${BASH_SOURCE[0]}")"
 rundir="${XDG_RUNTIME_DIR:-${HOME}/.local/var/run}/${scriptname}"
 pidfile="${rundir}/PID"
 cleanup () {
-    flock -u 200
     rm -f "${pidfile}"
+    flock -u 200
 }
 mkdir -p "${rundir}"
 exec 200>"${pidfile}"
@@ -26,6 +26,6 @@ mkdir -p "${spooldir}"
 
 anacrontab="${XDG_CONFIG_HOME}/anacron/anacrontab"
 
-[ ! -f "$anacrontab" ] && exit 0
+[ -f "$anacrontab" ] || exit 0
 
 anacron -d -t "${anacrontab}" -S "${spooldir}"
